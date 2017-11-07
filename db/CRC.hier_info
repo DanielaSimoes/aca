@@ -1,0 +1,35 @@
+|ShiftRegisterN
+dataIn[0] => ~NO_FANOUT~
+dataIn[1] => dataOut[0].DATAIN
+dataIn[2] => dataOut[1].DATAIN
+dataIn[3] => dataOut[2].DATAIN
+dataIn[4] => dataOut[3].DATAIN
+dataIn[5] => dataOut[4].DATAIN
+dataIn[6] => dataOut[5].DATAIN
+dataIn[7] => dataOut[6].DATAIN
+dataIn[8] => dataOut[7].DATAIN
+dataIn[9] => dataOut[8].DATAIN
+dataIn[10] => dataOut[9].DATAIN
+dataIn[11] => dataOut[10].DATAIN
+dataIn[12] => dataOut[11].DATAIN
+dataIn[13] => dataOut[12].DATAIN
+dataIn[14] => dataOut[13].DATAIN
+dataIn[15] => dataOut[14].DATAIN
+dataOut[0] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataIn[8].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[8] <= dataIn[9].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[9] <= dataIn[10].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[10] <= dataIn[11].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[11] <= dataIn[12].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[12] <= dataIn[13].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[13] <= dataIn[14].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[14] <= dataIn[15].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[15] <= <GND>
+
+
