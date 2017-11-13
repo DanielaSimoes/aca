@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+-- Interface 
+entity OR2GATE is 
+	port(a : in std_logic;
+		  b : in std_logic;
+		  out : out std_logic);
+end OR2GATE;
+
+-- Implementação
+architecture Behavioral of OR2GATE is 
+begin
+
+	outPort <= inPort0 or inPort1;
+	
+end Behavioral;
