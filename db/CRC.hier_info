@@ -1,63 +1,187 @@
 |CRC
-a[0] => ~NO_FANOUT~
-a[1] => ~NO_FANOUT~
-a[2] => ~NO_FANOUT~
-a[3] => ~NO_FANOUT~
-a[4] => ~NO_FANOUT~
-a[5] => ~NO_FANOUT~
-a[6] => ~NO_FANOUT~
-a[7] => ~NO_FANOUT~
-a[8] => ~NO_FANOUT~
-a[9] => ~NO_FANOUT~
-a[10] => ~NO_FANOUT~
-a[11] => ~NO_FANOUT~
-a[12] => ~NO_FANOUT~
-a[13] => ~NO_FANOUT~
-a[14] => ~NO_FANOUT~
-a[15] => xormodule:blk0.a
-r[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
-r[1] <= r[1].DB_MAX_OUTPUT_PORT_TYPE
-r[2] <= r[2].DB_MAX_OUTPUT_PORT_TYPE
-r[3] <= r[3].DB_MAX_OUTPUT_PORT_TYPE
-r[4] <= r[4].DB_MAX_OUTPUT_PORT_TYPE
-r[5] <= r[5].DB_MAX_OUTPUT_PORT_TYPE
-r[6] <= r[6].DB_MAX_OUTPUT_PORT_TYPE
-r[7] <= r[7].DB_MAX_OUTPUT_PORT_TYPE
+a[0] => shiftregistern:shift8.dataIn[0]
+a[1] => shiftregistern:shift7.dataIn[0]
+a[2] => shiftregistern:shift6.dataIn[0]
+a[3] => shiftregistern:shift5.dataIn[0]
+a[4] => shiftregistern:shift4.dataIn[0]
+a[5] => shiftregistern:shift3.dataIn[0]
+a[6] => shiftregistern:shift2.dataIn[0]
+a[7] => shiftregistern:shift1.dataIn[0]
+a[8] => shiftregistern:shift1.dataIn[1]
+a[9] => shiftregistern:shift1.dataIn[2]
+a[10] => shiftregistern:shift1.dataIn[3]
+a[11] => shiftregistern:shift1.dataIn[4]
+a[12] => shiftregistern:shift1.dataIn[5]
+a[13] => shiftregistern:shift1.dataIn[6]
+a[14] => shiftregistern:shift1.dataIn[7]
+a[15] => shiftregistern:shift1.dataIn[8]
+r[0] <= shiftregistern:shift8.dataOut[0]
+r[1] <= shiftregistern:shift8.dataOut[1]
+r[2] <= shiftregistern:shift8.dataOut[2]
+r[3] <= shiftregistern:shift8.dataOut[3]
+r[4] <= shiftregistern:shift8.dataOut[4]
+r[5] <= shiftregistern:shift8.dataOut[5]
+r[6] <= shiftregistern:shift8.dataOut[6]
+r[7] <= shiftregistern:shift8.dataOut[7]
 
 
-|CRC|XorModule:blk0
-a => s.IN0
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
+|CRC|ShiftRegisterN:shift1
+dataIn[0] => dataOut[0].DATAIN
+dataIn[1] => dataOut[1].DATAIN
+dataIn[2] => dataOut[2].DATAIN
+dataIn[3] => dataOut[3].DATAIN
+dataIn[4] => dataOut[4].DATAIN
+dataIn[5] => dataOut[5].DATAIN
+dataIn[6] => dataOut[6].DATAIN
+dataIn[7] => dataOut[7].DATAIN
+dataIn[8] => ~NO_FANOUT~
+dataOut[0] <= dataIn[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CRC|XorModule:blk8
-a => s.IN0
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
+|CRC|ShiftRegisterN:shift2
+dataIn[0] => dataOut[0].DATAIN
+dataIn[1] => dataOut[1].DATAIN
+dataIn[2] => dataOut[2].DATAIN
+dataIn[3] => dataOut[3].DATAIN
+dataIn[4] => dataOut[4].DATAIN
+dataIn[5] => dataOut[5].DATAIN
+dataIn[6] => dataOut[6].DATAIN
+dataIn[7] => dataOut[7].DATAIN
+dataIn[8] => ~NO_FANOUT~
+dataOut[0] <= dataIn[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CRC|XorModule:blk7
-a => s.IN0
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
+|CRC|ShiftRegisterN:shift3
+dataIn[0] => dataOut[0].DATAIN
+dataIn[1] => dataOut[1].DATAIN
+dataIn[2] => dataOut[2].DATAIN
+dataIn[3] => dataOut[3].DATAIN
+dataIn[4] => dataOut[4].DATAIN
+dataIn[5] => dataOut[5].DATAIN
+dataIn[6] => dataOut[6].DATAIN
+dataIn[7] => dataOut[7].DATAIN
+dataIn[8] => ~NO_FANOUT~
+dataOut[0] <= dataIn[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CRC|XorModule:blk6
-a => s.IN0
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
+|CRC|ShiftRegisterN:shift4
+dataIn[0] => dataOut[0].DATAIN
+dataIn[1] => dataOut[1].DATAIN
+dataIn[2] => dataOut[2].DATAIN
+dataIn[3] => dataOut[3].DATAIN
+dataIn[4] => dataOut[4].DATAIN
+dataIn[5] => dataOut[5].DATAIN
+dataIn[6] => dataOut[6].DATAIN
+dataIn[7] => dataOut[7].DATAIN
+dataIn[8] => ~NO_FANOUT~
+dataOut[0] <= dataIn[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CRC|XorModule:blk4
-a => s.IN0
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
+|CRC|ShiftRegisterN:shift5
+dataIn[0] => dataOut[0].DATAIN
+dataIn[1] => dataOut[1].DATAIN
+dataIn[2] => dataOut[2].DATAIN
+dataIn[3] => dataOut[3].DATAIN
+dataIn[4] => dataOut[4].DATAIN
+dataIn[5] => dataOut[5].DATAIN
+dataIn[6] => dataOut[6].DATAIN
+dataIn[7] => dataOut[7].DATAIN
+dataIn[8] => ~NO_FANOUT~
+dataOut[0] <= dataIn[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|CRC|XorModule:blk2
-a => s.IN0
-b => s.IN1
-s <= s.DB_MAX_OUTPUT_PORT_TYPE
+|CRC|ShiftRegisterN:shift6
+dataIn[0] => dataOut[0].DATAIN
+dataIn[1] => dataOut[1].DATAIN
+dataIn[2] => dataOut[2].DATAIN
+dataIn[3] => dataOut[3].DATAIN
+dataIn[4] => dataOut[4].DATAIN
+dataIn[5] => dataOut[5].DATAIN
+dataIn[6] => dataOut[6].DATAIN
+dataIn[7] => dataOut[7].DATAIN
+dataIn[8] => ~NO_FANOUT~
+dataOut[0] <= dataIn[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC|ShiftRegisterN:shift7
+dataIn[0] => dataOut[0].DATAIN
+dataIn[1] => dataOut[1].DATAIN
+dataIn[2] => dataOut[2].DATAIN
+dataIn[3] => dataOut[3].DATAIN
+dataIn[4] => dataOut[4].DATAIN
+dataIn[5] => dataOut[5].DATAIN
+dataIn[6] => dataOut[6].DATAIN
+dataIn[7] => dataOut[7].DATAIN
+dataIn[8] => ~NO_FANOUT~
+dataOut[0] <= dataIn[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC|ShiftRegisterN:shift8
+dataIn[0] => dataOut[0].DATAIN
+dataIn[1] => dataOut[1].DATAIN
+dataIn[2] => dataOut[2].DATAIN
+dataIn[3] => dataOut[3].DATAIN
+dataIn[4] => dataOut[4].DATAIN
+dataIn[5] => dataOut[5].DATAIN
+dataIn[6] => dataOut[6].DATAIN
+dataIn[7] => dataOut[7].DATAIN
+dataIn[8] => ~NO_FANOUT~
+dataOut[0] <= dataIn[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
 
 

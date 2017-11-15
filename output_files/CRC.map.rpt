@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CRC
-Mon Nov 13 10:44:00 2017
+Wed Nov 15 14:38:09 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -14,14 +14,16 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "XorModule:blk2"
- 10. Port Connectivity Checks: "XorModule:blk4"
- 11. Port Connectivity Checks: "XorModule:blk6"
- 12. Port Connectivity Checks: "XorModule:blk7"
- 13. Port Connectivity Checks: "XorModule:blk8"
- 14. Port Connectivity Checks: "XorModule:blk0"
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: ShiftRegisterN:shift1
+ 10. Parameter Settings for User Entity Instance: ShiftRegisterN:shift2
+ 11. Parameter Settings for User Entity Instance: ShiftRegisterN:shift3
+ 12. Parameter Settings for User Entity Instance: ShiftRegisterN:shift4
+ 13. Parameter Settings for User Entity Instance: ShiftRegisterN:shift5
+ 14. Parameter Settings for User Entity Instance: ShiftRegisterN:shift6
+ 15. Parameter Settings for User Entity Instance: ShiftRegisterN:shift7
+ 16. Parameter Settings for User Entity Instance: ShiftRegisterN:shift8
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
 
 
 
@@ -47,7 +49,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 13 10:44:00 2017      ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 15 14:38:08 2017      ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; CRC                                        ;
 ; Top-level Entity Name              ; CRC                                        ;
@@ -171,14 +173,14 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                        ;
-+----------------------------------+-----------------+-----------------+------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path ; Library ;
-+----------------------------------+-----------------+-----------------+------------------------------+---------+
-; XorModule.vhd                    ; yes             ; User VHDL File  ; E:/Project/XorModule.vhd     ;         ;
-; CRC.vhd                          ; yes             ; User VHDL File  ; E:/Project/CRC.vhd           ;         ;
-+----------------------------------+-----------------+-----------------+------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                         ;
++----------------------------------+-----------------+-----------------+-------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path  ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------+---------+
+; ShiftRegisterN.vhd               ; yes             ; User VHDL File  ; E:/Project/ShiftRegisterN.vhd ;         ;
+; CRC.vhd                          ; yes             ; User VHDL File  ; E:/Project/CRC.vhd            ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -188,10 +190,10 @@ applicable agreement for further details.
 +--------------------------+------------------+
 ; I/O pins                 ; 24               ;
 ; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; a[0]             ;
+; Maximum fan-out node     ; a[8]             ;
 ; Maximum fan-out          ; 1                ;
-; Total fan-out            ; 24               ;
-; Average fan-out          ; 0.50             ;
+; Total fan-out            ; 32               ;
+; Average fan-out          ; 0.67             ;
 +--------------------------+------------------+
 
 
@@ -220,58 +222,84 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------+
-; Port Connectivity Checks: "XorModule:blk2" ;
-+------+-------+----------+------------------+
-; Port ; Type  ; Severity ; Details          ;
-+------+-------+----------+------------------+
-; b    ; Input ; Info     ; Stuck at VCC     ;
-+------+-------+----------+------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ShiftRegisterN:shift1 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; size           ; 9     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------+
-; Port Connectivity Checks: "XorModule:blk4" ;
-+------+-------+----------+------------------+
-; Port ; Type  ; Severity ; Details          ;
-+------+-------+----------+------------------+
-; b    ; Input ; Info     ; Stuck at VCC     ;
-+------+-------+----------+------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ShiftRegisterN:shift2 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; size           ; 9     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------+
-; Port Connectivity Checks: "XorModule:blk6" ;
-+------+-------+----------+------------------+
-; Port ; Type  ; Severity ; Details          ;
-+------+-------+----------+------------------+
-; b    ; Input ; Info     ; Stuck at VCC     ;
-+------+-------+----------+------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ShiftRegisterN:shift3 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; size           ; 9     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------+
-; Port Connectivity Checks: "XorModule:blk7" ;
-+------+-------+----------+------------------+
-; Port ; Type  ; Severity ; Details          ;
-+------+-------+----------+------------------+
-; b    ; Input ; Info     ; Stuck at VCC     ;
-+------+-------+----------+------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ShiftRegisterN:shift4 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; size           ; 9     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------+
-; Port Connectivity Checks: "XorModule:blk8" ;
-+------+-------+----------+------------------+
-; Port ; Type  ; Severity ; Details          ;
-+------+-------+----------+------------------+
-; b    ; Input ; Info     ; Stuck at VCC     ;
-+------+-------+----------+------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ShiftRegisterN:shift5 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; size           ; 9     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------+
-; Port Connectivity Checks: "XorModule:blk0" ;
-+------+-------+----------+------------------+
-; Port ; Type  ; Severity ; Details          ;
-+------+-------+----------+------------------+
-; b    ; Input ; Info     ; Stuck at VCC     ;
-+------+-------+----------+------------------+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ShiftRegisterN:shift6 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; size           ; 9     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ShiftRegisterN:shift7 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; size           ; 9     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ShiftRegisterN:shift8 ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; size           ; 9     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -289,7 +317,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Mon Nov 13 10:43:57 2017
+    Info: Processing started: Wed Nov 15 14:38:06 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CRC -c CRC
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file shiftregistern.vhd
@@ -302,28 +330,66 @@ Info (12021): Found 2 design units, including 1 entities, in source file crc.vhd
     Info (12022): Found design unit 1: CRC-structure
     Info (12023): Found entity 1: CRC
 Info (12127): Elaborating entity "CRC" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at CRC.vhd(6): used implicit default value for signal "r" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Info (12128): Elaborating entity "XorModule" for hierarchy "XorModule:blk0"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "r[0]" is stuck at GND
-    Warning (13410): Pin "r[1]" is stuck at GND
-    Warning (13410): Pin "r[2]" is stuck at GND
-    Warning (13410): Pin "r[3]" is stuck at GND
-    Warning (13410): Pin "r[4]" is stuck at GND
-    Warning (13410): Pin "r[5]" is stuck at GND
-    Warning (13410): Pin "r[6]" is stuck at GND
-    Warning (13410): Pin "r[7]" is stuck at GND
+Warning (10492): VHDL Process Statement warning at CRC.vhd(44): signal "shiftOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(45): signal "shiftOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(46): signal "shiftOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(47): signal "shiftOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(48): signal "shiftOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(49): signal "shiftOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(50): signal "shiftOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(51): signal "shiftOut1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(58): signal "shiftOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(59): signal "shiftOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(60): signal "shiftOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(61): signal "shiftOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(62): signal "shiftOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(63): signal "shiftOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(64): signal "shiftOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(65): signal "shiftOut2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(72): signal "shiftOut3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(73): signal "shiftOut3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(74): signal "shiftOut3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(75): signal "shiftOut3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(76): signal "shiftOut3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(77): signal "shiftOut3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(78): signal "shiftOut3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(79): signal "shiftOut3" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(86): signal "shiftOut4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(87): signal "shiftOut4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(88): signal "shiftOut4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(89): signal "shiftOut4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(90): signal "shiftOut4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(91): signal "shiftOut4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(92): signal "shiftOut4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(93): signal "shiftOut4" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(100): signal "shiftOut5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(101): signal "shiftOut5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(102): signal "shiftOut5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(103): signal "shiftOut5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(104): signal "shiftOut5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(105): signal "shiftOut5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(106): signal "shiftOut5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(107): signal "shiftOut5" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(114): signal "shiftOut6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(115): signal "shiftOut6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(116): signal "shiftOut6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(117): signal "shiftOut6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(118): signal "shiftOut6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(119): signal "shiftOut6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(120): signal "shiftOut6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(121): signal "shiftOut6" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(128): signal "shiftOut7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(129): signal "shiftOut7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(130): signal "shiftOut7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(131): signal "shiftOut7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(132): signal "shiftOut7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(133): signal "shiftOut7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(134): signal "shiftOut7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at CRC.vhd(135): signal "shiftOut7" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12128): Elaborating entity "ShiftRegisterN" for hierarchy "ShiftRegisterN:shift1"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "a[0]"
-    Warning (15610): No output dependent on input pin "a[1]"
-    Warning (15610): No output dependent on input pin "a[2]"
-    Warning (15610): No output dependent on input pin "a[3]"
-    Warning (15610): No output dependent on input pin "a[4]"
-    Warning (15610): No output dependent on input pin "a[5]"
-    Warning (15610): No output dependent on input pin "a[6]"
-    Warning (15610): No output dependent on input pin "a[7]"
+Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "a[8]"
     Warning (15610): No output dependent on input pin "a[9]"
     Warning (15610): No output dependent on input pin "a[10]"
@@ -335,9 +401,9 @@ Warning (21074): Design contains 16 input pin(s) that do not drive logic
 Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 8 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 27 warnings
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 65 warnings
     Info: Peak virtual memory: 435 megabytes
-    Info: Processing ended: Mon Nov 13 10:44:00 2017
+    Info: Processing ended: Wed Nov 15 14:38:09 2017
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 
