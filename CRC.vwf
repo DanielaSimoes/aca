@@ -202,7 +202,7 @@ SIGNAL("a[0]")
 	PARENT = "a";
 }
 
-SIGNAL("r")
+SIGNAL("error")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = BUS;
@@ -212,84 +212,84 @@ SIGNAL("r")
 	PARENT = "";
 }
 
-SIGNAL("r[7]")
+SIGNAL("error[7]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "r";
+	PARENT = "error";
 }
 
-SIGNAL("r[6]")
+SIGNAL("error[6]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "r";
+	PARENT = "error";
 }
 
-SIGNAL("r[5]")
+SIGNAL("error[5]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "r";
+	PARENT = "error";
 }
 
-SIGNAL("r[4]")
+SIGNAL("error[4]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "r";
+	PARENT = "error";
 }
 
-SIGNAL("r[3]")
+SIGNAL("error[3]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "r";
+	PARENT = "error";
 }
 
-SIGNAL("r[2]")
+SIGNAL("error[2]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "r";
+	PARENT = "error";
 }
 
-SIGNAL("r[1]")
+SIGNAL("error[1]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "r";
+	PARENT = "error";
 }
 
-SIGNAL("r[0]")
+SIGNAL("error[0]")
 {
 	VALUE_TYPE = NINE_LEVEL_BIT;
 	SIGNAL_TYPE = SINGLE_BIT;
 	WIDTH = 1;
 	LSB_INDEX = -1;
 	DIRECTION = OUTPUT;
-	PARENT = "r";
+	PARENT = "error";
 }
 
 TRANSITION_LIST("a[15]")
@@ -436,7 +436,7 @@ TRANSITION_LIST("a[0]")
 	}
 }
 
-TRANSITION_LIST("r[7]")
+TRANSITION_LIST("error[7]")
 {
 	NODE
 	{
@@ -445,7 +445,7 @@ TRANSITION_LIST("r[7]")
 	}
 }
 
-TRANSITION_LIST("r[6]")
+TRANSITION_LIST("error[6]")
 {
 	NODE
 	{
@@ -454,7 +454,7 @@ TRANSITION_LIST("r[6]")
 	}
 }
 
-TRANSITION_LIST("r[5]")
+TRANSITION_LIST("error[5]")
 {
 	NODE
 	{
@@ -463,7 +463,7 @@ TRANSITION_LIST("r[5]")
 	}
 }
 
-TRANSITION_LIST("r[4]")
+TRANSITION_LIST("error[4]")
 {
 	NODE
 	{
@@ -472,7 +472,7 @@ TRANSITION_LIST("r[4]")
 	}
 }
 
-TRANSITION_LIST("r[3]")
+TRANSITION_LIST("error[3]")
 {
 	NODE
 	{
@@ -481,7 +481,7 @@ TRANSITION_LIST("r[3]")
 	}
 }
 
-TRANSITION_LIST("r[2]")
+TRANSITION_LIST("error[2]")
 {
 	NODE
 	{
@@ -490,7 +490,7 @@ TRANSITION_LIST("r[2]")
 	}
 }
 
-TRANSITION_LIST("r[1]")
+TRANSITION_LIST("error[1]")
 {
 	NODE
 	{
@@ -499,7 +499,7 @@ TRANSITION_LIST("r[1]")
 	}
 }
 
-TRANSITION_LIST("r[0]")
+TRANSITION_LIST("error[0]")
 {
 	NODE
 	{
@@ -680,7 +680,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "r";
+	CHANNEL = "error";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 17;
@@ -690,7 +690,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "r[7]";
+	CHANNEL = "error[7]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 18;
@@ -700,7 +700,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "r[6]";
+	CHANNEL = "error[6]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 19;
@@ -710,7 +710,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "r[5]";
+	CHANNEL = "error[5]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 20;
@@ -720,7 +720,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "r[4]";
+	CHANNEL = "error[4]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 21;
@@ -730,7 +730,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "r[3]";
+	CHANNEL = "error[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 22;
@@ -740,7 +740,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "r[2]";
+	CHANNEL = "error[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 23;
@@ -750,7 +750,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "r[1]";
+	CHANNEL = "error[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 24;
@@ -760,7 +760,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "r[0]";
+	CHANNEL = "error[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 25;

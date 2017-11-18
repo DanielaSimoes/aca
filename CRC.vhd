@@ -3,38 +3,18 @@ USE ieee.std_logic_1164.all;
 
 ENTITY CRC IS
   PORT (a: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        r: OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
+		  error: OUT STD_LOGIC_VECTOR(7 DOWNTO 0));
 END CRC;
 
 ARCHITECTURE structure OF CRC IS
-SIGNAL dataIn: STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL signal_r: STD_LOGIC_VECTOR(7 DOWNTO 0);
 BEGIN
-process(a)
-	variable xorOut: STD_LOGIC_VECTOR(7 DOWNTO 0);
-	variable temp1: STD_LOGIC;
-	variable temp2: STD_LOGIC;
-	begin
-		dataIn <= a(15 downto 0);
-		xorOut := "00000000";
-		temp2 := '0';
-		for i in 15 downto 0 loop
-			temp1 := xorOut(0);
-			xorOut(0) := dataIn(i) xor temp2;
-			temp2 := xorOut(1);
-			xorOut(1) := temp1;
-			temp1 := xorOut(2);
-			xorOut(2) := temp2 xor xorOut(0);
-			temp2 := xorOut(3);
-			xorOut(3) := temp1;
-			temp1 := xorOut(4);
-			xorOut(4) := temp2 xor xorOut(0);
-			temp2 := xorOut(5);
-			xorOut(5) := temp1;
-			temp1 := xorOut(6);
-			xorOut(6) := temp2 xor xorOut(0);
-			xorOut(7) := temp1 xor xorOut(0);
-			temp2 := xorOut(7);
-		end loop;
-			r <= xorOut;
-end process;
+	encoder: entity work.encoder(structure)
+				port map(a => a,
+							r => signal_r);
+							
+	checker: entity work.checker(structure)
+				port map(a => a,
+							r => signal_r,
+							error => error);
 END structure;

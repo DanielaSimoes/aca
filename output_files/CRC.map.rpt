@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CRC
-Sat Nov 18 13:09:01 2017
+Sat Nov 18 17:06:25 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -41,13 +41,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 18 13:09:01 2017      ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 18 17:06:25 2017      ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; CRC                                        ;
 ; Top-level Entity Name              ; CRC                                        ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 15                                         ;
-;     Total combinational functions  ; 15                                         ;
+; Total logic elements               ; 0                                          ;
+;     Total combinational functions  ; 0                                          ;
 ;     Dedicated logic registers      ; 0                                          ;
 ; Total registers                    ; 0                                          ;
 ; Total pins                         ; 24                                         ;
@@ -171,6 +171,8 @@ applicable agreement for further details.
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path ; Library ;
 +----------------------------------+-----------------+-----------------+------------------------------+---------+
 ; CRC.vhd                          ; yes             ; User VHDL File  ; E:/Project/CRC.vhd           ;         ;
+; Checker.vhd                      ; yes             ; User VHDL File  ; E:/Project/Checker.vhd       ;         ;
+; Encoder.vhd                      ; yes             ; User VHDL File  ; E:/Project/Encoder.vhd       ;         ;
 +----------------------------------+-----------------+-----------------+------------------------------+---------+
 
 
@@ -181,10 +183,10 @@ applicable agreement for further details.
 +--------------------------+------------------+
 ; I/O pins                 ; 24               ;
 ; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; xorOut~3         ;
-; Maximum fan-out          ; 3                ;
-; Total fan-out            ; 88               ;
-; Average fan-out          ; 1.40             ;
+; Maximum fan-out node     ; error[0]~output  ;
+; Maximum fan-out          ; 1                ;
+; Total fan-out            ; 24               ;
+; Average fan-out          ; 0.50             ;
 +--------------------------+------------------+
 
 
@@ -193,7 +195,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; |CRC                       ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 24   ; 0            ; |CRC                ; work         ;
+; |CRC                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 24   ; 0            ; |CRC                ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -228,30 +230,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Sat Nov 18 13:08:57 2017
+    Info: Processing started: Sat Nov 18 17:06:21 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CRC -c CRC
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file shiftregistern.vhd
-    Info (12022): Found design unit 1: ShiftRegisterN-structure
-    Info (12023): Found entity 1: ShiftRegisterN
-Info (12021): Found 2 design units, including 1 entities, in source file xormodule.vhd
-    Info (12022): Found design unit 1: XorModule-structure
-    Info (12023): Found entity 1: XorModule
 Info (12021): Found 2 design units, including 1 entities, in source file crc.vhd
     Info (12022): Found design unit 1: CRC-structure
     Info (12023): Found entity 1: CRC
+Info (12021): Found 2 design units, including 1 entities, in source file checker.vhd
+    Info (12022): Found design unit 1: Checker-structure
+    Info (12023): Found entity 1: Checker
+Info (12021): Found 2 design units, including 1 entities, in source file encoder.vhd
+    Info (12022): Found design unit 1: Encoder-structure
+    Info (12023): Found entity 1: Encoder
 Info (12127): Elaborating entity "CRC" for the top level hierarchy
-Warning (10492): VHDL Process Statement warning at CRC.vhd(22): signal "dataIn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (286030): Timing-Driven Synthesis is running
+Info (12129): Elaborating entity "Encoder" using architecture "A:structure" for hierarchy "Encoder:encoder"
+Warning (10492): VHDL Process Statement warning at Encoder.vhd(22): signal "dataIn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12129): Elaborating entity "Checker" using architecture "A:structure" for hierarchy "Checker:checker"
+Warning (10492): VHDL Process Statement warning at Checker.vhd(18): signal "r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at Checker.vhd(23): signal "dataIn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "error[0]" is stuck at GND
+    Warning (13410): Pin "error[1]" is stuck at GND
+    Warning (13410): Pin "error[2]" is stuck at GND
+    Warning (13410): Pin "error[3]" is stuck at GND
+    Warning (13410): Pin "error[4]" is stuck at GND
+    Warning (13410): Pin "error[5]" is stuck at GND
+    Warning (13410): Pin "error[6]" is stuck at GND
+    Warning (13410): Pin "error[7]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "a[0]"
+    Warning (15610): No output dependent on input pin "a[8]"
+    Warning (15610): No output dependent on input pin "a[14]"
+    Warning (15610): No output dependent on input pin "a[15]"
+    Warning (15610): No output dependent on input pin "a[12]"
+    Warning (15610): No output dependent on input pin "a[13]"
+    Warning (15610): No output dependent on input pin "a[10]"
+    Warning (15610): No output dependent on input pin "a[11]"
+    Warning (15610): No output dependent on input pin "a[9]"
+    Warning (15610): No output dependent on input pin "a[6]"
+    Warning (15610): No output dependent on input pin "a[7]"
+    Warning (15610): No output dependent on input pin "a[4]"
+    Warning (15610): No output dependent on input pin "a[5]"
+    Warning (15610): No output dependent on input pin "a[2]"
+    Warning (15610): No output dependent on input pin "a[3]"
+    Warning (15610): No output dependent on input pin "a[1]"
+Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 15 logic cells
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 455 megabytes
-    Info: Processing ended: Sat Nov 18 13:09:01 2017
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 29 warnings
+    Info: Peak virtual memory: 442 megabytes
+    Info: Processing ended: Sat Nov 18 17:06:25 2017
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 

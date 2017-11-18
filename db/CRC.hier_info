@@ -1,4 +1,47 @@
 |CRC
+a[0] => encoder:encoder.a[0]
+a[0] => checker:checker.a[0]
+a[1] => encoder:encoder.a[1]
+a[1] => checker:checker.a[1]
+a[2] => encoder:encoder.a[2]
+a[2] => checker:checker.a[2]
+a[3] => encoder:encoder.a[3]
+a[3] => checker:checker.a[3]
+a[4] => encoder:encoder.a[4]
+a[4] => checker:checker.a[4]
+a[5] => encoder:encoder.a[5]
+a[5] => checker:checker.a[5]
+a[6] => encoder:encoder.a[6]
+a[6] => checker:checker.a[6]
+a[7] => encoder:encoder.a[7]
+a[7] => checker:checker.a[7]
+a[8] => encoder:encoder.a[8]
+a[8] => checker:checker.a[8]
+a[9] => encoder:encoder.a[9]
+a[9] => checker:checker.a[9]
+a[10] => encoder:encoder.a[10]
+a[10] => checker:checker.a[10]
+a[11] => encoder:encoder.a[11]
+a[11] => checker:checker.a[11]
+a[12] => encoder:encoder.a[12]
+a[12] => checker:checker.a[12]
+a[13] => encoder:encoder.a[13]
+a[13] => checker:checker.a[13]
+a[14] => encoder:encoder.a[14]
+a[14] => checker:checker.a[14]
+a[15] => encoder:encoder.a[15]
+a[15] => checker:checker.a[15]
+error[0] <= checker:checker.error[0]
+error[1] <= checker:checker.error[1]
+error[2] <= checker:checker.error[2]
+error[3] <= checker:checker.error[3]
+error[4] <= checker:checker.error[4]
+error[5] <= checker:checker.error[5]
+error[6] <= checker:checker.error[6]
+error[7] <= checker:checker.error[7]
+
+
+|CRC|Encoder:encoder
 a[0] => xorOut.IN1
 a[1] => xorOut.IN1
 a[2] => xorOut.IN1
@@ -25,5 +68,42 @@ r[4] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
 r[5] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
 r[6] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
 r[7] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|CRC|Checker:checker
+a[0] => xorOut.IN1
+a[1] => xorOut.IN1
+a[2] => xorOut.IN1
+a[3] => xorOut.IN1
+a[4] => xorOut.IN1
+a[5] => xorOut.IN1
+a[6] => xorOut.IN1
+a[7] => xorOut.IN1
+a[8] => xorOut.IN1
+a[9] => xorOut.IN1
+a[10] => xorOut.IN1
+a[11] => xorOut.IN1
+a[12] => xorOut.IN1
+a[13] => xorOut.IN1
+a[14] => xorOut.IN0
+a[15] => xorOut.IN1
+a[15] => xorOut.IN1
+a[15] => xorOut.IN1
+r[0] => xorOut.IN1
+r[1] => xorOut.IN1
+r[2] => xorOut.IN1
+r[3] => xorOut.IN1
+r[4] => xorOut.IN1
+r[5] => xorOut.IN1
+r[6] => xorOut.IN1
+r[7] => xorOut.IN1
+error[0] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
+error[1] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
+error[2] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
+error[3] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
+error[4] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
+error[5] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
+error[6] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
+error[7] <= xorOut.DB_MAX_OUTPUT_PORT_TYPE
 
 
