@@ -508,7 +508,7 @@ TRANSITION_LIST("r[7]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -534,7 +534,7 @@ TRANSITION_LIST("r[5]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -586,7 +586,7 @@ TRANSITION_LIST("r[1]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }
@@ -599,7 +599,7 @@ TRANSITION_LIST("r[0]")
 		NODE
 		{
 			REPEAT = 1;
-			LEVEL 1 FOR 1000.0;
+			LEVEL 0 FOR 1000.0;
 		}
 	}
 }

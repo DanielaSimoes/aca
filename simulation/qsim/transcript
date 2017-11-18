@@ -18,6 +18,7 @@
 # Loading work.CRC
 # Loading cycloneiv_ver.cycloneiv_io_obuf
 # Loading cycloneiv_ver.cycloneiv_io_ibuf
+# Loading cycloneiv_ver.cycloneiv_lcell_comb
 # Loading work.CRC_vlg_sample_tst
 # Loading work.CRC_vlg_check_tst
 # Simulation passed !

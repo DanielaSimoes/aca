@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "11/18/2017 13:10:32"
+// Generated on "11/17/2017 15:36:59"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    CRC
 // 
@@ -58,16 +58,16 @@ module CRC_vlg_check_tst (
 	r,
 	sampler_rx
 );
-input [7:0] r;
+input [8:0] r;
 input sampler_rx;
 
-reg [7:0] r_expected;
+reg [8:0] r_expected;
 
-reg [7:0] r_prev;
+reg [8:0] r_prev;
 
-reg [7:0] r_expected_prev;
+reg [8:0] r_expected_prev;
 
-reg [7:0] last_r_exp;
+reg [8:0] last_r_exp;
 
 reg trigger;
 
@@ -100,6 +100,11 @@ begin
 end
 
 
+// expected r[ 8 ]
+initial
+begin
+	r_expected[8] = 1'bX;
+end 
 // expected r[ 7 ]
 initial
 begin
@@ -258,6 +263,19 @@ begin
 		on_first_change[1] = 1'b0;
 		last_r_exp[7] = r_expected_prev[7];
 	end
+	if (
+		( r_expected_prev[8] !== 1'bx ) && ( r_prev[8] !== r_expected_prev[8] )
+		&& ((r_expected_prev[8] !== last_r_exp[8]) ||
+			on_first_change[1])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port r[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", r_expected_prev);
+		$display ("     Real value = %b", r_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[1] = 1'b0;
+		last_r_exp[8] = r_expected_prev[8];
+	end
 
 	trigger <= ~trigger;
 end
@@ -270,7 +288,7 @@ if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
 	$display ("Simulation passed !");
-$finish;
+$stop;
 end 
 endmodule
 
@@ -279,7 +297,7 @@ module CRC_vlg_vec_tst();
 // general purpose registers
 reg [15:0] a;
 // wires                                               
-wire [7:0] r;
+wire [8:0] r;
 
 wire sampler;                             
 
@@ -297,12 +315,12 @@ end
 // a[ 14 ]
 initial
 begin
-	a[14] = 1'b0;
+	a[14] = 1'b1;
 end 
 // a[ 13 ]
 initial
 begin
-	a[13] = 1'b0;
+	a[13] = 1'b1;
 end 
 // a[ 12 ]
 initial
@@ -312,7 +330,7 @@ end
 // a[ 11 ]
 initial
 begin
-	a[11] = 1'b0;
+	a[11] = 1'b1;
 end 
 // a[ 10 ]
 initial
@@ -337,7 +355,7 @@ end
 // a[ 6 ]
 initial
 begin
-	a[6] = 1'b0;
+	a[6] = 1'b1;
 end 
 // a[ 5 ]
 initial
@@ -347,7 +365,7 @@ end
 // a[ 4 ]
 initial
 begin
-	a[4] = 1'b0;
+	a[4] = 1'b1;
 end 
 // a[ 3 ]
 initial
@@ -362,12 +380,12 @@ end
 // a[ 1 ]
 initial
 begin
-	a[1] = 1'b0;
+	a[1] = 1'b1;
 end 
 // a[ 0 ]
 initial
 begin
-	a[0] = 1'b0;
+	a[0] = 1'b1;
 end 
 
 CRC_vlg_sample_tst tb_sample (

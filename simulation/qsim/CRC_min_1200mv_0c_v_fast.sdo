@@ -29,163 +29,21 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "CRC")
-  (DATE "11/15/2017 15:10:11")
+  (DATE "11/17/2017 15:37:32")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 32-bit")
   (VERSION "Version 13.1.4 Build 182 03/12/2014 SJ Web Edition")
   (DIVIDER .)
   (TIMESCALE 1 ps)
 
+	// No Timing Cells with timing info are found in the compiled design. A dummy “dff” Timing Cell is created.
   (CELL
-    (CELLTYPE "cycloneiv_io_obuf")
-    (INSTANCE r\[0\]\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (1957:1957:1957) (1789:1789:1789))
-        (IOPATH i o (1675:1675:1675) (1723:1723:1723))
-      )
-    )
+    (CELLTYPE "dff")
+    (INSTANCE * )
   )
+	// No Timing Cells with timing info are found in the compiled design. A dummy “dff” Timing Cell is created.
   (CELL
-    (CELLTYPE "cycloneiv_io_obuf")
-    (INSTANCE r\[1\]\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (2142:2142:2142) (1967:1967:1967))
-        (IOPATH i o (2171:2171:2171) (2180:2180:2180))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_obuf")
-    (INSTANCE r\[2\]\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (1810:1810:1810) (1981:1981:1981))
-        (IOPATH i o (1600:1600:1600) (1589:1589:1589))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_obuf")
-    (INSTANCE r\[3\]\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (1775:1775:1775) (1944:1944:1944))
-        (IOPATH i o (1723:1723:1723) (1675:1675:1675))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_obuf")
-    (INSTANCE r\[4\]\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (2145:2145:2145) (1969:1969:1969))
-        (IOPATH i o (1589:1589:1589) (1600:1600:1600))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_obuf")
-    (INSTANCE r\[5\]\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (1957:1957:1957) (1783:1783:1783))
-        (IOPATH i o (1685:1685:1685) (1733:1733:1733))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_obuf")
-    (INSTANCE r\[6\]\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (1943:1943:1943) (2140:2140:2140))
-        (IOPATH i o (1723:1723:1723) (1675:1675:1675))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_obuf")
-    (INSTANCE r\[7\]\~output)
-    (DELAY
-      (ABSOLUTE
-        (PORT i (2197:2197:2197) (2006:2006:2006))
-        (IOPATH i o (1528:1528:1528) (1555:1555:1555))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE a\[0\]\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (252:252:252) (627:627:627))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE a\[1\]\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (252:252:252) (627:627:627))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE a\[2\]\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (262:262:262) (637:637:637))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE a\[3\]\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (263:263:263) (638:638:638))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE a\[4\]\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (252:252:252) (627:627:627))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE a\[5\]\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (263:263:263) (638:638:638))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE a\[6\]\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (273:273:273) (648:648:648))
-      )
-    )
-  )
-  (CELL
-    (CELLTYPE "cycloneiv_io_ibuf")
-    (INSTANCE a\[7\]\~input)
-    (DELAY
-      (ABSOLUTE
-        (IOPATH i o (252:252:252) (627:627:627))
-      )
-    )
+    (CELLTYPE "dff")
+    (INSTANCE * )
   )
 )
