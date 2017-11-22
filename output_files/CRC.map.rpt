@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CRC
-Sat Nov 18 17:06:25 2017
+Tue Nov 21 23:02:48 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -14,8 +14,9 @@ Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |ShiftRegister
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +42,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 18 17:06:25 2017      ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 21 23:02:48 2017      ;
 ; Quartus II 32-bit Version          ; 13.1.4 Build 182 03/12/2014 SJ Web Edition ;
 ; Revision Name                      ; CRC                                        ;
-; Top-level Entity Name              ; CRC                                        ;
+; Top-level Entity Name              ; ShiftRegister                              ;
 ; Family                             ; Cyclone IV GX                              ;
 ; Total logic elements               ; 0                                          ;
 ;     Total combinational functions  ; 0                                          ;
 ;     Dedicated logic registers      ; 0                                          ;
 ; Total registers                    ; 0                                          ;
-; Total pins                         ; 24                                         ;
+; Total pins                         ; 32                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -67,7 +68,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                                      ; CRC                ; CRC                ;
+; Top-level entity name                                                      ; ShiftRegister      ; CRC                ;
 ; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -170,9 +171,7 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path ; Library ;
 +----------------------------------+-----------------+-----------------+------------------------------+---------+
-; CRC.vhd                          ; yes             ; User VHDL File  ; E:/Project/CRC.vhd           ;         ;
-; Checker.vhd                      ; yes             ; User VHDL File  ; E:/Project/Checker.vhd       ;         ;
-; Encoder.vhd                      ; yes             ; User VHDL File  ; E:/Project/Encoder.vhd       ;         ;
+; ShiftRegister.vhd                ; yes             ; User VHDL File  ; E:/Project/ShiftRegister.vhd ;         ;
 +----------------------------------+-----------------+-----------------+------------------------------+---------+
 
 
@@ -181,12 +180,12 @@ applicable agreement for further details.
 +--------------------------+------------------+
 ; Resource                 ; Usage            ;
 +--------------------------+------------------+
-; I/O pins                 ; 24               ;
+; I/O pins                 ; 32               ;
 ; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; error[0]~output  ;
+; Maximum fan-out node     ; dataIn[0]        ;
 ; Maximum fan-out          ; 1                ;
-; Total fan-out            ; 24               ;
-; Average fan-out          ; 0.50             ;
+; Total fan-out            ; 47               ;
+; Average fan-out          ; 0.73             ;
 +--------------------------+------------------+
 
 
@@ -195,7 +194,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; |CRC                       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 24   ; 0            ; |CRC                ; work         ;
+; |ShiftRegister             ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 32   ; 0            ; |ShiftRegister      ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -215,6 +214,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |ShiftRegister ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; size           ; 16    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -230,7 +239,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Sat Nov 18 17:06:21 2017
+    Info: Processing started: Tue Nov 21 23:02:45 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CRC -c CRC
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file crc.vhd
@@ -242,47 +251,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file checker
 Info (12021): Found 2 design units, including 1 entities, in source file encoder.vhd
     Info (12022): Found design unit 1: Encoder-structure
     Info (12023): Found entity 1: Encoder
-Info (12127): Elaborating entity "CRC" for the top level hierarchy
-Info (12129): Elaborating entity "Encoder" using architecture "A:structure" for hierarchy "Encoder:encoder"
-Warning (10492): VHDL Process Statement warning at Encoder.vhd(22): signal "dataIn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Info (12129): Elaborating entity "Checker" using architecture "A:structure" for hierarchy "Checker:checker"
-Warning (10492): VHDL Process Statement warning at Checker.vhd(18): signal "r" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at Checker.vhd(23): signal "dataIn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Info (12021): Found 2 design units, including 1 entities, in source file shiftregister.vhd
+    Info (12022): Found design unit 1: ShiftRegister-structure
+    Info (12023): Found entity 1: ShiftRegister
+Info (12127): Elaborating entity "ShiftRegister" for the top level hierarchy
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "error[0]" is stuck at GND
-    Warning (13410): Pin "error[1]" is stuck at GND
-    Warning (13410): Pin "error[2]" is stuck at GND
-    Warning (13410): Pin "error[3]" is stuck at GND
-    Warning (13410): Pin "error[4]" is stuck at GND
-    Warning (13410): Pin "error[5]" is stuck at GND
-    Warning (13410): Pin "error[6]" is stuck at GND
-    Warning (13410): Pin "error[7]" is stuck at GND
+    Warning (13410): Pin "dataOut[15]" is stuck at GND
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "a[0]"
-    Warning (15610): No output dependent on input pin "a[8]"
-    Warning (15610): No output dependent on input pin "a[14]"
-    Warning (15610): No output dependent on input pin "a[15]"
-    Warning (15610): No output dependent on input pin "a[12]"
-    Warning (15610): No output dependent on input pin "a[13]"
-    Warning (15610): No output dependent on input pin "a[10]"
-    Warning (15610): No output dependent on input pin "a[11]"
-    Warning (15610): No output dependent on input pin "a[9]"
-    Warning (15610): No output dependent on input pin "a[6]"
-    Warning (15610): No output dependent on input pin "a[7]"
-    Warning (15610): No output dependent on input pin "a[4]"
-    Warning (15610): No output dependent on input pin "a[5]"
-    Warning (15610): No output dependent on input pin "a[2]"
-    Warning (15610): No output dependent on input pin "a[3]"
-    Warning (15610): No output dependent on input pin "a[1]"
-Info (21057): Implemented 24 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "dataIn[0]"
+Info (21057): Implemented 32 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 8 output pins
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 442 megabytes
-    Info: Processing ended: Sat Nov 18 17:06:25 2017
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:03
+    Info (21059): Implemented 16 output pins
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 438 megabytes
+    Info: Processing ended: Tue Nov 21 23:02:48 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
