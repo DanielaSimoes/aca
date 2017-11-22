@@ -1,5 +1,5 @@
 Assembler report for CRC
-Tue Nov 21 23:03:01 2017
+Wed Nov 22 11:36:57 2017
 Quartus II 32-bit Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
 
 
@@ -37,9 +37,9 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov 21 23:03:01 2017 ;
+; Assembler Status      ; Successful - Wed Nov 22 11:36:57 2017 ;
 ; Revision Name         ; CRC                                   ;
-; Top-level Entity Name ; ShiftRegister                         ;
+; Top-level Entity Name ; Encoder                               ;
 ; Family                ; Cyclone IV GX                         ;
 ; Device                ; EP4CGX15BF14C6                        ;
 +-----------------------+---------------------------------------+
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                  ;
 +----------------+------------------------------------------+
 ; Device         ; EP4CGX15BF14C6                           ;
-; JTAG usercode  ; 0x000BC678                               ;
-; Checksum       ; 0x000BC678                               ;
+; JTAG usercode  ; 0x000BF7D3                               ;
+; Checksum       ; 0x000BF7D3                               ;
 +----------------+------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Assembler
     Info: Version 13.1.4 Build 182 03/12/2014 SJ Web Edition
-    Info: Processing started: Tue Nov 21 23:03:00 2017
+    Info: Processing started: Wed Nov 22 11:36:55 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off CRC -c CRC
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 32-bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 413 megabytes
-    Info: Processing ended: Tue Nov 21 23:03:01 2017
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Wed Nov 22 11:36:57 2017
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

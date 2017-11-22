@@ -3,7 +3,7 @@ $comment
 		vcd file CRC.msim.vcd -direction
 $end
 $date
-	Tue Nov 21 23:07:19 2017
+	Wed Nov 22 11:38:30 2017
 $end
 $version
 	ModelSim Version 10.1d
@@ -11,124 +11,174 @@ $end
 $timescale
 	1ps
 $end
-$scope module ShiftRegister_vlg_vec_tst $end
-$var reg 16 ! dataIn [15:0] $end
-$var wire 1 " dataOut [15] $end
-$var wire 1 # dataOut [14] $end
-$var wire 1 $ dataOut [13] $end
-$var wire 1 % dataOut [12] $end
-$var wire 1 & dataOut [11] $end
-$var wire 1 ' dataOut [10] $end
-$var wire 1 ( dataOut [9] $end
-$var wire 1 ) dataOut [8] $end
-$var wire 1 * dataOut [7] $end
-$var wire 1 + dataOut [6] $end
-$var wire 1 , dataOut [5] $end
-$var wire 1 - dataOut [4] $end
-$var wire 1 . dataOut [3] $end
-$var wire 1 / dataOut [2] $end
-$var wire 1 0 dataOut [1] $end
-$var wire 1 1 dataOut [0] $end
-$var wire 1 2 sampler $end
+$scope module Encoder_vlg_vec_tst $end
+$var reg 16 ! a [15:0] $end
+$var wire 1 " r [7] $end
+$var wire 1 # r [6] $end
+$var wire 1 $ r [5] $end
+$var wire 1 % r [4] $end
+$var wire 1 & r [3] $end
+$var wire 1 ' r [2] $end
+$var wire 1 ( r [1] $end
+$var wire 1 ) r [0] $end
+$var wire 1 * sampler $end
 $scope module i1 $end
-$var wire 1 3 gnd $end
-$var wire 1 4 vcc $end
-$var wire 1 5 unknown $end
-$var tri1 1 6 devclrn $end
-$var tri1 1 7 devpor $end
-$var tri1 1 8 devoe $end
-$var wire 1 9 dataIn[0]~input_o $end
-$var wire 1 : dataOut[0]~output_o $end
-$var wire 1 ; dataOut[1]~output_o $end
-$var wire 1 < dataOut[2]~output_o $end
-$var wire 1 = dataOut[3]~output_o $end
-$var wire 1 > dataOut[4]~output_o $end
-$var wire 1 ? dataOut[5]~output_o $end
-$var wire 1 @ dataOut[6]~output_o $end
-$var wire 1 A dataOut[7]~output_o $end
-$var wire 1 B dataOut[8]~output_o $end
-$var wire 1 C dataOut[9]~output_o $end
-$var wire 1 D dataOut[10]~output_o $end
-$var wire 1 E dataOut[11]~output_o $end
-$var wire 1 F dataOut[12]~output_o $end
-$var wire 1 G dataOut[13]~output_o $end
-$var wire 1 H dataOut[14]~output_o $end
-$var wire 1 I dataOut[15]~output_o $end
-$var wire 1 J dataIn[1]~input_o $end
-$var wire 1 K dataIn[2]~input_o $end
-$var wire 1 L dataIn[3]~input_o $end
-$var wire 1 M dataIn[4]~input_o $end
-$var wire 1 N dataIn[5]~input_o $end
-$var wire 1 O dataIn[6]~input_o $end
-$var wire 1 P dataIn[7]~input_o $end
-$var wire 1 Q dataIn[8]~input_o $end
-$var wire 1 R dataIn[9]~input_o $end
-$var wire 1 S dataIn[10]~input_o $end
-$var wire 1 T dataIn[11]~input_o $end
-$var wire 1 U dataIn[12]~input_o $end
-$var wire 1 V dataIn[13]~input_o $end
-$var wire 1 W dataIn[14]~input_o $end
-$var wire 1 X dataIn[15]~input_o $end
+$var wire 1 + gnd $end
+$var wire 1 , vcc $end
+$var wire 1 - unknown $end
+$var tri1 1 . devclrn $end
+$var tri1 1 / devpor $end
+$var tri1 1 0 devoe $end
+$var wire 1 1 r[0]~output_o $end
+$var wire 1 2 r[1]~output_o $end
+$var wire 1 3 r[2]~output_o $end
+$var wire 1 4 r[3]~output_o $end
+$var wire 1 5 r[4]~output_o $end
+$var wire 1 6 r[5]~output_o $end
+$var wire 1 7 r[6]~output_o $end
+$var wire 1 8 r[7]~output_o $end
+$var wire 1 9 a[0]~input_o $end
+$var wire 1 : a[7]~input_o $end
+$var wire 1 ; a[10]~input_o $end
+$var wire 1 < a[4]~input_o $end
+$var wire 1 = a[11]~input_o $end
+$var wire 1 > blk11|s_xorOut[0]~0_combout $end
+$var wire 1 ? a[12]~input_o $end
+$var wire 1 @ a[5]~input_o $end
+$var wire 1 A blk11|s_xorOut[0]~1_combout $end
+$var wire 1 B a[15]~input_o $end
+$var wire 1 C a[9]~input_o $end
+$var wire 1 D a[8]~input_o $end
+$var wire 1 E a[14]~input_o $end
+$var wire 1 F blk13|s_xorOut[0]~0_combout $end
+$var wire 1 G a[6]~input_o $end
+$var wire 1 H a[13]~input_o $end
+$var wire 1 I blk9|s_xorOut[0]~0_combout $end
+$var wire 1 J blk9|s_xorOut[0]~1_combout $end
+$var wire 1 K blk13|s_xorOut[0]~1_combout $end
+$var wire 1 L a[3]~input_o $end
+$var wire 1 M blk12|s_xorOut[0]~0_combout $end
+$var wire 1 N a[2]~input_o $end
+$var wire 1 O blk13|s_xorOut[0]~2_combout $end
+$var wire 1 P a[1]~input_o $end
+$var wire 1 Q blk14|s_xorOut[0]~0_combout $end
+$var wire 1 R blk10|s_xorOut[0]~0_combout $end
+$var wire 1 S blk14|s_xorOut[0]~1_combout $end
+$var wire 1 T blk8|s_xorOut[0]~0_combout $end
+$var wire 1 U blk8|s_xorOut[0]~1_combout $end
+$var wire 1 V blk15|s_xorOut[2]~0_combout $end
+$var wire 1 W blk14|s_xorOut[2]~2_combout $end
+$var wire 1 X blk15|s_xorOut[6]~1_combout $end
+$var wire 1 Y blk15|s_xorOut[7]~2_combout $end
+$var wire 1 Z blk14|s_xorOut [7] $end
+$var wire 1 [ blk14|s_xorOut [6] $end
+$var wire 1 \ blk14|s_xorOut [5] $end
+$var wire 1 ] blk14|s_xorOut [4] $end
+$var wire 1 ^ blk14|s_xorOut [3] $end
+$var wire 1 _ blk14|s_xorOut [2] $end
+$var wire 1 ` blk14|s_xorOut [1] $end
+$var wire 1 a blk14|s_xorOut [0] $end
+$var wire 1 b blk13|s_xorOut [7] $end
+$var wire 1 c blk13|s_xorOut [6] $end
+$var wire 1 d blk13|s_xorOut [5] $end
+$var wire 1 e blk13|s_xorOut [4] $end
+$var wire 1 f blk13|s_xorOut [3] $end
+$var wire 1 g blk13|s_xorOut [2] $end
+$var wire 1 h blk13|s_xorOut [1] $end
+$var wire 1 i blk13|s_xorOut [0] $end
+$var wire 1 j blk15|s_xorOut [7] $end
+$var wire 1 k blk15|s_xorOut [6] $end
+$var wire 1 l blk15|s_xorOut [5] $end
+$var wire 1 m blk15|s_xorOut [4] $end
+$var wire 1 n blk15|s_xorOut [3] $end
+$var wire 1 o blk15|s_xorOut [2] $end
+$var wire 1 p blk15|s_xorOut [1] $end
+$var wire 1 q blk15|s_xorOut [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-b10 !
-11
-00
-0/
-0.
-0-
-0,
-0+
-0*
-0)
-0(
+b1011000001000000 !
+1)
+1(
 0'
 0&
-0%
-0$
+1%
+1$
 0#
 0"
-x2
+x*
+0+
+1,
+x-
+1.
+1/
+10
+11
+12
 03
-14
-x5
+04
+15
 16
-17
-18
+07
+08
 09
-1:
+0:
 0;
 0<
 0=
 0>
-0?
+1?
 0@
-0A
-0B
+1A
+1B
 0C
 0D
 0E
-0F
-0G
-0H
-0I
+1F
+1G
+1H
+1I
 1J
-0K
+1K
 0L
-0M
+1M
 0N
-0O
+1O
 0P
-0Q
-0R
-0S
-0T
+1Q
+1R
+1S
+1T
 0U
 0V
 0W
-0X
+1X
+1Y
+1a
+z`
+z_
+z^
+z]
+z\
+z[
+zZ
+1i
+zh
+zg
+zf
+ze
+zd
+zc
+zb
+1q
+zp
+zo
+zn
+zm
+zl
+0k
+0j
 $end
 #1000000

@@ -1,0 +1,14 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity XorModule3 is 
+ port(dataIn : in STD_LOGIC;
+ 		  b : in STD_LOGIC;
+		  c : in STD_LOGIC;
+ 		  s : out STD_LOGIC);
+ end XorModule3;
+ 
+architecture structure of XorModule3 is 
+begin
+ s <= a xor b xor c;
+end structure;

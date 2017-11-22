@@ -1,35 +1,395 @@
-|ShiftRegister
-dataIn[0] => ~NO_FANOUT~
-dataIn[1] => dataOut[0].DATAIN
-dataIn[2] => dataOut[1].DATAIN
-dataIn[3] => dataOut[2].DATAIN
-dataIn[4] => dataOut[3].DATAIN
-dataIn[5] => dataOut[4].DATAIN
-dataIn[6] => dataOut[5].DATAIN
-dataIn[7] => dataOut[6].DATAIN
-dataIn[8] => dataOut[7].DATAIN
-dataIn[9] => dataOut[8].DATAIN
-dataIn[10] => dataOut[9].DATAIN
-dataIn[11] => dataOut[10].DATAIN
-dataIn[12] => dataOut[11].DATAIN
-dataIn[13] => dataOut[12].DATAIN
-dataIn[14] => dataOut[13].DATAIN
-dataIn[15] => dataOut[14].DATAIN
-dataOut[0] <= dataIn[1].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[1] <= dataIn[2].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[2] <= dataIn[3].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[3] <= dataIn[4].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[4] <= dataIn[5].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[5] <= dataIn[6].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[6] <= dataIn[7].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[7] <= dataIn[8].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[8] <= dataIn[9].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[9] <= dataIn[10].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[10] <= dataIn[11].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[11] <= dataIn[12].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[12] <= dataIn[13].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[13] <= dataIn[14].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[14] <= dataIn[15].DB_MAX_OUTPUT_PORT_TYPE
-dataOut[15] <= <GND>
+|Encoder
+a[0] => encodermodule:blk15.a
+a[1] => encodermodule:blk14.a
+a[2] => encodermodule:blk13.a
+a[3] => encodermodule:blk12.a
+a[4] => encodermodule:blk11.a
+a[5] => encodermodule:blk10.a
+a[6] => encodermodule:blk9.a
+a[7] => encodermodule:blk8.a
+a[8] => encodermodule:blk7.a
+a[9] => encodermodule:blk6.a
+a[10] => encodermodule:blk5.a
+a[11] => encodermodule:blk4.a
+a[12] => encodermodule:blk3.a
+a[13] => encodermodule:blk2.a
+a[14] => encodermodule:blk1.a
+a[15] => encodermodule:blk0.a
+r[0] << encodermodule:blk15.s_xorOut[0]
+r[1] << encodermodule:blk15.s_xorOut[1]
+r[2] << encodermodule:blk15.s_xorOut[2]
+r[3] << encodermodule:blk15.s_xorOut[3]
+r[4] << encodermodule:blk15.s_xorOut[4]
+r[5] << encodermodule:blk15.s_xorOut[5]
+r[6] << encodermodule:blk15.s_xorOut[6]
+r[7] << encodermodule:blk15.s_xorOut[7]
+
+
+|Encoder|EncoderModule:blk0
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk1
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk2
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk3
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk4
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk5
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk6
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk7
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk8
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk9
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk10
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk11
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk12
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk13
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk14
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Encoder|EncoderModule:blk15
+a => signal_xorOut.IN0
+in_xorOut[0] => s_xorOut[1].DATAIN
+in_xorOut[1] => s_xorOut.IN1
+in_xorOut[2] => s_xorOut[3].DATAIN
+in_xorOut[3] => s_xorOut.IN1
+in_xorOut[4] => s_xorOut[5].DATAIN
+in_xorOut[5] => s_xorOut.IN1
+in_xorOut[6] => s_xorOut.IN1
+in_xorOut[6] => signal_xorOut.IN1
+in_xorOut[7] => ~NO_FANOUT~
+temp2_in => signal_xorOut.IN1
+temp2_out <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[0] <= signal_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[1] <= in_xorOut[0].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[2] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[3] <= in_xorOut[2].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[4] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[5] <= in_xorOut[4].DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[6] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
+s_xorOut[7] <= s_xorOut.DB_MAX_OUTPUT_PORT_TYPE
 
 

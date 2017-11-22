@@ -25,40 +25,35 @@ process(a)
 	
 	if xorOut(8) == '0' and xorOut(8) == '0' then	
 	xorOut1: entity work.XorModule(structure)
-				port map(a => xorOut(7 downto 0) & a(6),
+				port map(a => xorOut(7 downto 0) & a(5),
 							b => '111010101',
 							s => xorOut);
 	end if;
 							
 	xorOut2: entity work.XorModule(structure)
-				port map(a => xorOut(7 downto 0) & a(5),
-							b => '111010101',
-							s => xorOut);
-							
-	xorOut3: entity work.XorModule(structure)
 				port map(a => xorOut(7 downto 0) & a(4),
 							b => '111010101',
 							s => xorOut);
 							
-	xorOut4: entity work.XorModule(structure)
+	xorOut3: entity work.XorModule(structure)
 				port map(a => xorOut(7 downto 0) & a(3),
 							b => '111010101',
 							s => xorOut);
 							
-	xorOut5: entity work.XorModule(structure)
+	xorOut4: entity work.XorModule(structure)
 				port map(a => xorOut(7 downto 0) & a(2),
 							b => '111010101',
 							s => xorOut);
 							
-	xorOut6: entity work.XorModule(structure)
+	xorOut5: entity work.XorModule(structure)
 				port map(a => xorOut(7 downto 0) & a(1),
 							b => '111010101',
 							s => xorOut);
-	
-	xorOut7: entity work.XorModule(structure)
+							
+	xorOut6: entity work.XorModule(structure)
 				port map(a => xorOut(7 downto 0) & a(0),
 							b => '111010101',
-							s => r);
- 
+							s => xorOut);
+	
 end process;
 END structure;
